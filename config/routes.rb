@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'users/show'
-      get 'users/create'
-      get 'bookings/index'
-      get 'bookings/create'
-      get 'tours/index'
-      get 'tours/show'
-      get 'tours/create'
-      get 'tours/destroy'
+      resources: :users, only: %i[show create]
+      resources: :tours, only: %i[index show create destroy]
+      resources: :booking, only: %i[index create]
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
