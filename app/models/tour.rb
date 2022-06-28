@@ -8,5 +8,5 @@ class Tour < ApplicationRecord
   validates :guides, presence: true, numericality: true, comparison: { greater_than: 0 }
   validates :lodging, presence: true
   validates :price, presence: true, numericality: true, comparison: { greater_than: 0 }
-  validates :image_url, presence: true, url: true
+  validates :image_url, presence: true
 end
