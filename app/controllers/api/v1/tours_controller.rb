@@ -1,5 +1,8 @@
 class Api::V1::ToursController < ApplicationController
-  def index; end
+  def index
+    tours = Tour.all.order(price: :asc)
+    render json: tours
+  end
 
   def show; end
 
