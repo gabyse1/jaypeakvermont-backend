@@ -7,6 +7,7 @@ class CreateTours < ActiveRecord::Migration[7.0]
       t.integer :capacity
       t.integer :guides
       t.string :lodging
+      t.string :difficulty
       t.decimal :price, precision: 10, scale: 2
       t.string :image_url
 

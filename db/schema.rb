@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_28_102655) do
     t.integer "capacity"
     t.integer "guides"
     t.string "lodging"
+    t.string "difficulty"
     t.decimal "price", precision: 10, scale: 2
     t.string "image_url"
     t.datetime "created_at", null: false
